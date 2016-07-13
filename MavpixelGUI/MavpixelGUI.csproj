@@ -296,7 +296,6 @@
     <Content Include="avrdude.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="CurrentVersion.xml" />
     <None Include="Resources\github.png" />
     <None Include="LICENSE" />
     <None Include="Resources\ledglows.png" />
