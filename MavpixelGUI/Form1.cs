@@ -1458,7 +1458,8 @@ namespace MavpixelGUI
         //Send all changed data
         public void Send()
         {
-            comms.SendCommand();
+            if (serialControl1.IsOpen)
+                comms.SendCommand();
         }
 
         //------------------------------------------------------------------------------------------------

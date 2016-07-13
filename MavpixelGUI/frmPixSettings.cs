@@ -173,7 +173,7 @@ namespace MavpixelGUI
 
         public void LoadDefaults()
         {
-            txtSysid.Text = "0";
+            txtSysid.Text = "2";
             chkHeartBeat.Checked = false;
             trkBright.Value = 10;
             chkAnim.Checked = false;

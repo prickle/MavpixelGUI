@@ -33,15 +33,30 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.prgBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.lblBeats = new System.Windows.Forms.ToolStripStatusLabel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.fullClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.boxProgress = new MavpixelGUI.RoundBox();
+            this.prgReading = new System.Windows.Forms.ProgressBar();
+            this.boxProgressLabel = new System.Windows.Forms.Label();
+            this.rbxPrompt = new MavpixelGUI.RoundBox();
+            this.lblWaiting = new System.Windows.Forms.Label();
+            this.rbxInfo = new MavpixelGUI.RoundBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnGps = new System.Windows.Forms.Button();
             this.btnClearAllWiring = new System.Windows.Forms.Button();
             this.btnClearSelectedWiring = new System.Windows.Forms.Button();
             this.btnWireOrder = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.divider4 = new MavpixelGUI.Divider();
             this.btnColor15 = new System.Windows.Forms.Button();
             this.btnColor14 = new System.Windows.Forms.Button();
             this.btnColor13 = new System.Windows.Forms.Button();
@@ -65,6 +80,7 @@
             this.btnEast = new System.Windows.Forms.Button();
             this.btnWest = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.divider3 = new MavpixelGUI.Divider();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnRing = new System.Windows.Forms.Button();
             this.btnThrottle = new System.Windows.Forms.Button();
@@ -73,79 +89,63 @@
             this.btnModes = new System.Windows.Forms.Button();
             this.btnWarnings = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.divider2 = new MavpixelGUI.Divider();
             this.label5 = new System.Windows.Forms.Label();
             this.lblRemaining = new System.Windows.Forms.Label();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.btnClearSelected = new System.Windows.Forms.Button();
+            this.ledArray1 = new MavpixelGUI.LedArray();
+            this.divider1 = new MavpixelGUI.Divider();
             this.btnDocumentation = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSend = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mavpixelSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeColorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorPaletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.refreshToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reloadAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.sendAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.terminalWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firmwareFlasherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetMavpixelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mavpixelOnGithubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.cbxSysid = new System.Windows.Forms.ComboBox();
             this.lblDevice = new System.Windows.Forms.Label();
             this.hbTimer = new System.Windows.Forms.Timer(this.components);
-            this.boxProgress = new MavpixelGUI.RoundBox();
-            this.prgReading = new System.Windows.Forms.ProgressBar();
-            this.boxProgressLabel = new System.Windows.Forms.Label();
-            this.rbxPrompt = new MavpixelGUI.RoundBox();
-            this.lblWaiting = new System.Windows.Forms.Label();
-            this.rbxInfo = new MavpixelGUI.RoundBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.divider4 = new MavpixelGUI.Divider();
-            this.divider3 = new MavpixelGUI.Divider();
-            this.divider2 = new MavpixelGUI.Divider();
-            this.ledArray1 = new MavpixelGUI.LedArray();
-            this.divider1 = new MavpixelGUI.Divider();
             this.serialControl1 = new MavpixelGUI.serialControl();
             this.comms = new MavpixelGUI.Communicator();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fullClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.lblBeats = new System.Windows.Forms.ToolStripStatusLabel();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mavpixelSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modeColorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.colorPaletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reloadAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.terminalWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.firmwareFlasherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetMavpixelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mavpixelOnGithubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.boxProgress.SuspendLayout();
             this.rbxPrompt.SuspendLayout();
             this.rbxInfo.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -175,6 +175,12 @@
             this.prgBar.Size = new System.Drawing.Size(100, 16);
             this.prgBar.Visible = false;
             // 
+            // lblBeats
+            // 
+            this.lblBeats.Image = global::MavpixelGUI.Properties.Resources.heart_grey;
+            this.lblBeats.Name = "lblBeats";
+            this.lblBeats.Size = new System.Drawing.Size(16, 17);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -188,15 +194,55 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(139, 126);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = global::MavpixelGUI.Properties.Resources.folderopen;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem2.Text = "&Open File";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = global::MavpixelGUI.Properties.Resources.disk;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem1.Text = "&Save File";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(135, 6);
             // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.arrow_refresh;
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.refreshToolStripMenuItem.Text = "&Reload LEDs";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
+            // sendToolStripMenuItem
+            // 
+            this.sendToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_go;
+            this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
+            this.sendToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.sendToolStripMenuItem.Text = "S&end";
+            this.sendToolStripMenuItem.Click += new System.EventHandler(this.btnSend_Click);
+            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(135, 6);
+            // 
+            // fullClearToolStripMenuItem
+            // 
+            this.fullClearToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.edit_clear;
+            this.fullClearToolStripMenuItem.Name = "fullClearToolStripMenuItem";
+            this.fullClearToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.fullClearToolStripMenuItem.Text = "&Full Clear";
+            this.fullClearToolStripMenuItem.Click += new System.EventHandler(this.fullClearToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -259,6 +305,97 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(848, 573);
             this.panel1.TabIndex = 2;
+            // 
+            // boxProgress
+            // 
+            this.boxProgress.BackColor = System.Drawing.Color.Transparent;
+            this.boxProgress.BorderColor = System.Drawing.Color.Yellow;
+            this.boxProgress.Controls.Add(this.prgReading);
+            this.boxProgress.Controls.Add(this.boxProgressLabel);
+            this.boxProgress.FillColor = System.Drawing.Color.MistyRose;
+            this.boxProgress.Location = new System.Drawing.Point(111, 273);
+            this.boxProgress.Name = "boxProgress";
+            this.boxProgress.Size = new System.Drawing.Size(321, 58);
+            this.boxProgress.TabIndex = 48;
+            this.boxProgress.Visible = false;
+            // 
+            // prgReading
+            // 
+            this.prgReading.Location = new System.Drawing.Point(11, 29);
+            this.prgReading.Maximum = 32;
+            this.prgReading.Name = "prgReading";
+            this.prgReading.Size = new System.Drawing.Size(300, 20);
+            this.prgReading.TabIndex = 1;
+            // 
+            // boxProgressLabel
+            // 
+            this.boxProgressLabel.AutoSize = true;
+            this.boxProgressLabel.BackColor = System.Drawing.Color.MistyRose;
+            this.boxProgressLabel.Location = new System.Drawing.Point(10, 10);
+            this.boxProgressLabel.Name = "boxProgressLabel";
+            this.boxProgressLabel.Size = new System.Drawing.Size(101, 13);
+            this.boxProgressLabel.TabIndex = 0;
+            this.boxProgressLabel.Text = "Reading LED data..";
+            // 
+            // rbxPrompt
+            // 
+            this.rbxPrompt.BackColor = System.Drawing.Color.Transparent;
+            this.rbxPrompt.BorderColor = System.Drawing.Color.Yellow;
+            this.rbxPrompt.Controls.Add(this.lblWaiting);
+            this.rbxPrompt.FillColor = System.Drawing.Color.MistyRose;
+            this.rbxPrompt.Location = new System.Drawing.Point(159, 334);
+            this.rbxPrompt.Name = "rbxPrompt";
+            this.rbxPrompt.Size = new System.Drawing.Size(225, 32);
+            this.rbxPrompt.TabIndex = 49;
+            // 
+            // lblWaiting
+            // 
+            this.lblWaiting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWaiting.BackColor = System.Drawing.Color.MistyRose;
+            this.lblWaiting.Location = new System.Drawing.Point(3, 1);
+            this.lblWaiting.Name = "lblWaiting";
+            this.lblWaiting.Size = new System.Drawing.Size(219, 28);
+            this.lblWaiting.TabIndex = 0;
+            this.lblWaiting.Text = "Waiting to Connect, Open file or New..";
+            this.lblWaiting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rbxInfo
+            // 
+            this.rbxInfo.BackColor = System.Drawing.Color.Transparent;
+            this.rbxInfo.BorderColor = System.Drawing.Color.Yellow;
+            this.rbxInfo.Controls.Add(this.label4);
+            this.rbxInfo.Controls.Add(this.label9);
+            this.rbxInfo.FillColor = System.Drawing.Color.MistyRose;
+            this.rbxInfo.Location = new System.Drawing.Point(46, 174);
+            this.rbxInfo.Name = "rbxInfo";
+            this.rbxInfo.Size = new System.Drawing.Size(451, 94);
+            this.rbxInfo.TabIndex = 47;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BackColor = System.Drawing.Color.MistyRose;
+            this.label4.Location = new System.Drawing.Point(12, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(424, 31);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Configure LEDs on the grid, configure wiring order then attach LEDs on your aircr" +
+                "aft according to grid positions. This configurator is based on Cleanflight.";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.BackColor = System.Drawing.Color.MistyRose;
+            this.label9.Location = new System.Drawing.Point(12, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(424, 31);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "The Mavpixel can read serial Mavlink messages from an APM or Pixhawk flight contr" +
+                "oller to control colours and effects of individual LEDs on a number of strips.";
             // 
             // btnGps
             // 
@@ -328,6 +465,15 @@
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 42;
             this.label8.Text = "LED Strip Wiring";
+            // 
+            // divider4
+            // 
+            this.divider4.BackColor = System.Drawing.Color.Transparent;
+            this.divider4.ForeColor = System.Drawing.Color.Green;
+            this.divider4.Location = new System.Drawing.Point(538, 486);
+            this.divider4.Name = "divider4";
+            this.divider4.Size = new System.Drawing.Size(298, 1);
+            this.divider4.TabIndex = 43;
             // 
             // btnColor15
             // 
@@ -713,6 +859,15 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "LED Orientation and Color";
             // 
+            // divider3
+            // 
+            this.divider3.BackColor = System.Drawing.Color.Transparent;
+            this.divider3.ForeColor = System.Drawing.Color.Green;
+            this.divider3.Location = new System.Drawing.Point(538, 309);
+            this.divider3.Name = "divider3";
+            this.divider3.Size = new System.Drawing.Size(298, 1);
+            this.divider3.TabIndex = 19;
+            // 
             // btnColor
             // 
             this.btnColor.BackColor = System.Drawing.SystemColors.Control;
@@ -827,6 +982,15 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "LED Functions";
             // 
+            // divider2
+            // 
+            this.divider2.BackColor = System.Drawing.Color.Transparent;
+            this.divider2.ForeColor = System.Drawing.Color.Green;
+            this.divider2.Location = new System.Drawing.Point(538, 112);
+            this.divider2.Name = "divider2";
+            this.divider2.Size = new System.Drawing.Size(298, 1);
+            this.divider2.TabIndex = 9;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -878,6 +1042,29 @@
             this.btnClearSelected.UseVisualStyleBackColor = false;
             this.btnClearSelected.Click += new System.EventHandler(this.btnClearSelected_Click);
             // 
+            // ledArray1
+            // 
+            this.ledArray1.BackColor = System.Drawing.Color.Transparent;
+            this.ledArray1.Enabled = false;
+            this.ledArray1.Location = new System.Drawing.Point(16, 47);
+            this.ledArray1.Name = "ledArray1";
+            this.ledArray1.OrderMode = false;
+            this.ledArray1.Size = new System.Drawing.Size(512, 512);
+            this.ledArray1.TabIndex = 3;
+            this.ledArray1.Selected += new MavpixelGUI.LedArray.SelectedEventHandler(this.ledArray1_Selected);
+            this.ledArray1.RemainingChanged += new MavpixelGUI.LedArray.RemainingChangedEventHandler(this.ledArray1_RemainingChanged);
+            // 
+            // divider1
+            // 
+            this.divider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.divider1.BackColor = System.Drawing.Color.Transparent;
+            this.divider1.ForeColor = System.Drawing.Color.Green;
+            this.divider1.Location = new System.Drawing.Point(16, 34);
+            this.divider1.Name = "divider1";
+            this.divider1.Size = new System.Drawing.Size(820, 1);
+            this.divider1.TabIndex = 2;
+            // 
             // btnDocumentation
             // 
             this.btnDocumentation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -915,6 +1102,26 @@
             this.panel2.Size = new System.Drawing.Size(848, 34);
             this.panel2.TabIndex = 3;
             // 
+            // btnSend
+            // 
+            this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSend.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSend.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnSend.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSend.Image = global::MavpixelGUI.Properties.Resources.page_go;
+            this.btnSend.Location = new System.Drawing.Point(751, 5);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(85, 24);
+            this.btnSend.TabIndex = 0;
+            this.btnSend.Text = "Send";
+            this.btnSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSend.UseVisualStyleBackColor = false;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
@@ -945,10 +1152,38 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_add;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.newToolStripMenuItem.Text = "&New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
+            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_save;
+            this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
@@ -962,10 +1197,26 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_delete;
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.closeToolStripMenuItem.Text = "&Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(143, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.cross;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
@@ -982,15 +1233,69 @@
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "&Settings";
             // 
+            // mavpixelSettingsToolStripMenuItem
+            // 
+            this.mavpixelSettingsToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.led;
+            this.mavpixelSettingsToolStripMenuItem.Name = "mavpixelSettingsToolStripMenuItem";
+            this.mavpixelSettingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.mavpixelSettingsToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.mavpixelSettingsToolStripMenuItem.Text = "&Mavpixel Settings";
+            this.mavpixelSettingsToolStripMenuItem.Click += new System.EventHandler(this.mavpixelSettingsToolStripMenuItem_Click);
+            // 
+            // modeColorsToolStripMenuItem
+            // 
+            this.modeColorsToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.color_wheel;
+            this.modeColorsToolStripMenuItem.Name = "modeColorsToolStripMenuItem";
+            this.modeColorsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.modeColorsToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.modeColorsToolStripMenuItem.Text = "Mode &Colors";
+            this.modeColorsToolStripMenuItem.Click += new System.EventHandler(this.modeColorsToolStripMenuItem_Click);
+            // 
+            // colorPaletteToolStripMenuItem
+            // 
+            this.colorPaletteToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.palette;
+            this.colorPaletteToolStripMenuItem.Name = "colorPaletteToolStripMenuItem";
+            this.colorPaletteToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.colorPaletteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.colorPaletteToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.colorPaletteToolStripMenuItem.Text = "Color &Palette";
+            this.colorPaletteToolStripMenuItem.Click += new System.EventHandler(this.colorPaletteToolStripMenuItem_Click);
+            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(208, 6);
             // 
+            // refreshToolStripMenuItem1
+            // 
+            this.refreshToolStripMenuItem1.Image = global::MavpixelGUI.Properties.Resources.page_refresh;
+            this.refreshToolStripMenuItem1.Name = "refreshToolStripMenuItem1";
+            this.refreshToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.refreshToolStripMenuItem1.Size = new System.Drawing.Size(211, 22);
+            this.refreshToolStripMenuItem1.Text = "&Reload LEDs";
+            this.refreshToolStripMenuItem1.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
+            // reloadAllToolStripMenuItem
+            // 
+            this.reloadAllToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.arrow_refresh;
+            this.reloadAllToolStripMenuItem.Name = "reloadAllToolStripMenuItem";
+            this.reloadAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.reloadAllToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.reloadAllToolStripMenuItem.Text = "Reload &All";
+            this.reloadAllToolStripMenuItem.Click += new System.EventHandler(this.reloadAllToolStripMenuItem_Click);
+            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(208, 6);
+            // 
+            // sendAllToolStripMenuItem
+            // 
+            this.sendAllToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_go;
+            this.sendAllToolStripMenuItem.Name = "sendAllToolStripMenuItem";
+            this.sendAllToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.sendAllToolStripMenuItem.Text = "&Send All";
+            this.sendAllToolStripMenuItem.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -1004,10 +1309,44 @@
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
+            // terminalWindowToolStripMenuItem
+            // 
+            this.terminalWindowToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.application_xp_terminal;
+            this.terminalWindowToolStripMenuItem.Name = "terminalWindowToolStripMenuItem";
+            this.terminalWindowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.terminalWindowToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.terminalWindowToolStripMenuItem.Text = "&Terminal Window";
+            this.terminalWindowToolStripMenuItem.Click += new System.EventHandler(this.terminalWindowToolStripMenuItem_Click);
+            // 
+            // firmwareFlasherToolStripMenuItem
+            // 
+            this.firmwareFlasherToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.chipwrite;
+            this.firmwareFlasherToolStripMenuItem.Name = "firmwareFlasherToolStripMenuItem";
+            this.firmwareFlasherToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.firmwareFlasherToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.firmwareFlasherToolStripMenuItem.Text = "&Firmware Flasher";
+            this.firmwareFlasherToolStripMenuItem.Click += new System.EventHandler(this.firmwareFlasherToolStripMenuItem_Click);
+            // 
+            // resetMavpixelToolStripMenuItem
+            // 
+            this.resetMavpixelToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.reset16;
+            this.resetMavpixelToolStripMenuItem.Name = "resetMavpixelToolStripMenuItem";
+            this.resetMavpixelToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.resetMavpixelToolStripMenuItem.Text = "&Reset Mavpixel";
+            this.resetMavpixelToolStripMenuItem.Click += new System.EventHandler(this.resetMavpixelToolStripMenuItem_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(206, 6);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.application_form_edit;
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.optionsToolStripMenuItem.Text = "Program &Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -1019,6 +1358,27 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.help;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // mavpixelOnGithubToolStripMenuItem
+            // 
+            this.mavpixelOnGithubToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.github;
+            this.mavpixelOnGithubToolStripMenuItem.Name = "mavpixelOnGithubToolStripMenuItem";
+            this.mavpixelOnGithubToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.mavpixelOnGithubToolStripMenuItem.Text = "Mavpixel on &Github";
+            this.mavpixelOnGithubToolStripMenuItem.Click += new System.EventHandler(this.mavpixelOnGithubToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(174, 6);
             // 
             // checkForUpdatesToolStripMenuItem
             // 
@@ -1064,147 +1424,6 @@
             this.hbTimer.Interval = 500;
             this.hbTimer.Tick += new System.EventHandler(this.hbTimer_Tick);
             // 
-            // boxProgress
-            // 
-            this.boxProgress.BackColor = System.Drawing.Color.Transparent;
-            this.boxProgress.BorderColor = System.Drawing.Color.Yellow;
-            this.boxProgress.Controls.Add(this.prgReading);
-            this.boxProgress.Controls.Add(this.boxProgressLabel);
-            this.boxProgress.FillColor = System.Drawing.Color.MistyRose;
-            this.boxProgress.Location = new System.Drawing.Point(111, 273);
-            this.boxProgress.Name = "boxProgress";
-            this.boxProgress.Size = new System.Drawing.Size(321, 58);
-            this.boxProgress.TabIndex = 48;
-            this.boxProgress.Visible = false;
-            // 
-            // prgReading
-            // 
-            this.prgReading.Location = new System.Drawing.Point(11, 29);
-            this.prgReading.Maximum = 32;
-            this.prgReading.Name = "prgReading";
-            this.prgReading.Size = new System.Drawing.Size(300, 20);
-            this.prgReading.TabIndex = 1;
-            // 
-            // boxProgressLabel
-            // 
-            this.boxProgressLabel.AutoSize = true;
-            this.boxProgressLabel.BackColor = System.Drawing.Color.MistyRose;
-            this.boxProgressLabel.Location = new System.Drawing.Point(10, 10);
-            this.boxProgressLabel.Name = "boxProgressLabel";
-            this.boxProgressLabel.Size = new System.Drawing.Size(101, 13);
-            this.boxProgressLabel.TabIndex = 0;
-            this.boxProgressLabel.Text = "Reading LED data..";
-            // 
-            // rbxPrompt
-            // 
-            this.rbxPrompt.BackColor = System.Drawing.Color.Transparent;
-            this.rbxPrompt.BorderColor = System.Drawing.Color.Yellow;
-            this.rbxPrompt.Controls.Add(this.lblWaiting);
-            this.rbxPrompt.FillColor = System.Drawing.Color.MistyRose;
-            this.rbxPrompt.Location = new System.Drawing.Point(159, 334);
-            this.rbxPrompt.Name = "rbxPrompt";
-            this.rbxPrompt.Size = new System.Drawing.Size(225, 32);
-            this.rbxPrompt.TabIndex = 49;
-            // 
-            // lblWaiting
-            // 
-            this.lblWaiting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblWaiting.BackColor = System.Drawing.Color.MistyRose;
-            this.lblWaiting.Location = new System.Drawing.Point(3, 1);
-            this.lblWaiting.Name = "lblWaiting";
-            this.lblWaiting.Size = new System.Drawing.Size(219, 28);
-            this.lblWaiting.TabIndex = 0;
-            this.lblWaiting.Text = "Waiting to Connect, Open file or New..";
-            this.lblWaiting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rbxInfo
-            // 
-            this.rbxInfo.BackColor = System.Drawing.Color.Transparent;
-            this.rbxInfo.BorderColor = System.Drawing.Color.Yellow;
-            this.rbxInfo.Controls.Add(this.label4);
-            this.rbxInfo.Controls.Add(this.label9);
-            this.rbxInfo.FillColor = System.Drawing.Color.MistyRose;
-            this.rbxInfo.Location = new System.Drawing.Point(46, 174);
-            this.rbxInfo.Name = "rbxInfo";
-            this.rbxInfo.Size = new System.Drawing.Size(451, 94);
-            this.rbxInfo.TabIndex = 47;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.BackColor = System.Drawing.Color.MistyRose;
-            this.label4.Location = new System.Drawing.Point(12, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(424, 31);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Configure LEDs on the grid, configure wiring order then attach LEDs on your aircr" +
-                "aft according to grid positions. This configurator is based on Cleanflight.";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.BackColor = System.Drawing.Color.MistyRose;
-            this.label9.Location = new System.Drawing.Point(12, 12);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(424, 31);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "The Mavpixel can read serial Mavlink messages from an APM or Pixhawk flight contr" +
-                "oller to control colours and effects of individual LEDs on a number of strips.";
-            // 
-            // divider4
-            // 
-            this.divider4.BackColor = System.Drawing.Color.Transparent;
-            this.divider4.ForeColor = System.Drawing.Color.Green;
-            this.divider4.Location = new System.Drawing.Point(538, 486);
-            this.divider4.Name = "divider4";
-            this.divider4.Size = new System.Drawing.Size(298, 1);
-            this.divider4.TabIndex = 43;
-            // 
-            // divider3
-            // 
-            this.divider3.BackColor = System.Drawing.Color.Transparent;
-            this.divider3.ForeColor = System.Drawing.Color.Green;
-            this.divider3.Location = new System.Drawing.Point(538, 309);
-            this.divider3.Name = "divider3";
-            this.divider3.Size = new System.Drawing.Size(298, 1);
-            this.divider3.TabIndex = 19;
-            // 
-            // divider2
-            // 
-            this.divider2.BackColor = System.Drawing.Color.Transparent;
-            this.divider2.ForeColor = System.Drawing.Color.Green;
-            this.divider2.Location = new System.Drawing.Point(538, 112);
-            this.divider2.Name = "divider2";
-            this.divider2.Size = new System.Drawing.Size(298, 1);
-            this.divider2.TabIndex = 9;
-            // 
-            // ledArray1
-            // 
-            this.ledArray1.BackColor = System.Drawing.Color.Transparent;
-            this.ledArray1.Enabled = false;
-            this.ledArray1.Location = new System.Drawing.Point(16, 47);
-            this.ledArray1.Name = "ledArray1";
-            this.ledArray1.OrderMode = false;
-            this.ledArray1.Size = new System.Drawing.Size(512, 512);
-            this.ledArray1.TabIndex = 3;
-            this.ledArray1.Selected += new MavpixelGUI.LedArray.SelectedEventHandler(this.ledArray1_Selected);
-            this.ledArray1.RemainingChanged += new MavpixelGUI.LedArray.RemainingChangedEventHandler(this.ledArray1_RemainingChanged);
-            // 
-            // divider1
-            // 
-            this.divider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.divider1.BackColor = System.Drawing.Color.Transparent;
-            this.divider1.ForeColor = System.Drawing.Color.Green;
-            this.divider1.Location = new System.Drawing.Point(16, 34);
-            this.divider1.Name = "divider1";
-            this.divider1.Size = new System.Drawing.Size(820, 1);
-            this.divider1.TabIndex = 2;
-            // 
             // serialControl1
             // 
             this.serialControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1239,225 +1458,6 @@
             this.comms.ReadCommand += new MavpixelGUI.Communicator.ReadCommandEventHandler(this.comms_ReadCommand);
             this.comms.Completed += new MavpixelGUI.Communicator.CompletedEventHandler(this.comms_Completed);
             // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(174, 6);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Image = global::MavpixelGUI.Properties.Resources.folderopen;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(138, 22);
-            this.toolStripMenuItem2.Text = "&Open File";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = global::MavpixelGUI.Properties.Resources.disk;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
-            this.toolStripMenuItem1.Text = "&Save File";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.arrow_refresh;
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.refreshToolStripMenuItem.Text = "&Reload LEDs";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
-            // 
-            // sendToolStripMenuItem
-            // 
-            this.sendToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_go;
-            this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
-            this.sendToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.sendToolStripMenuItem.Text = "S&end";
-            this.sendToolStripMenuItem.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // fullClearToolStripMenuItem
-            // 
-            this.fullClearToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.edit_clear;
-            this.fullClearToolStripMenuItem.Name = "fullClearToolStripMenuItem";
-            this.fullClearToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.fullClearToolStripMenuItem.Text = "&Full Clear";
-            this.fullClearToolStripMenuItem.Click += new System.EventHandler(this.fullClearToolStripMenuItem_Click);
-            // 
-            // btnSend
-            // 
-            this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSend.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnSend.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnSend.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSend.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSend.Image = global::MavpixelGUI.Properties.Resources.page_go;
-            this.btnSend.Location = new System.Drawing.Point(751, 5);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(85, 24);
-            this.btnSend.TabIndex = 0;
-            this.btnSend.Text = "Send";
-            this.btnSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSend.UseVisualStyleBackColor = false;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // lblBeats
-            // 
-            this.lblBeats.Image = global::MavpixelGUI.Properties.Resources.heart_grey;
-            this.lblBeats.Name = "lblBeats";
-            this.lblBeats.Size = new System.Drawing.Size(16, 16);
-            // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_add;
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.newToolStripMenuItem.Text = "&New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
-            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.openToolStripMenuItem.Text = "&Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_save;
-            this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.saveToolStripMenuItem.Text = "&Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
-            // closeToolStripMenuItem
-            // 
-            this.closeToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_delete;
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.closeToolStripMenuItem.Text = "&Close";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.cross;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // mavpixelSettingsToolStripMenuItem
-            // 
-            this.mavpixelSettingsToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.led;
-            this.mavpixelSettingsToolStripMenuItem.Name = "mavpixelSettingsToolStripMenuItem";
-            this.mavpixelSettingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.mavpixelSettingsToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.mavpixelSettingsToolStripMenuItem.Text = "&Mavpixel Settings";
-            this.mavpixelSettingsToolStripMenuItem.Click += new System.EventHandler(this.mavpixelSettingsToolStripMenuItem_Click);
-            // 
-            // modeColorsToolStripMenuItem
-            // 
-            this.modeColorsToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.color_wheel;
-            this.modeColorsToolStripMenuItem.Name = "modeColorsToolStripMenuItem";
-            this.modeColorsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.modeColorsToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.modeColorsToolStripMenuItem.Text = "Mode &Colors";
-            this.modeColorsToolStripMenuItem.Click += new System.EventHandler(this.modeColorsToolStripMenuItem_Click);
-            // 
-            // colorPaletteToolStripMenuItem
-            // 
-            this.colorPaletteToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.palette;
-            this.colorPaletteToolStripMenuItem.Name = "colorPaletteToolStripMenuItem";
-            this.colorPaletteToolStripMenuItem.ShortcutKeyDisplayString = "";
-            this.colorPaletteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.colorPaletteToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.colorPaletteToolStripMenuItem.Text = "Color &Palette";
-            this.colorPaletteToolStripMenuItem.Click += new System.EventHandler(this.colorPaletteToolStripMenuItem_Click);
-            // 
-            // refreshToolStripMenuItem1
-            // 
-            this.refreshToolStripMenuItem1.Image = global::MavpixelGUI.Properties.Resources.page_refresh;
-            this.refreshToolStripMenuItem1.Name = "refreshToolStripMenuItem1";
-            this.refreshToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.refreshToolStripMenuItem1.Size = new System.Drawing.Size(211, 22);
-            this.refreshToolStripMenuItem1.Text = "&Reload LEDs";
-            this.refreshToolStripMenuItem1.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
-            // 
-            // reloadAllToolStripMenuItem
-            // 
-            this.reloadAllToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.arrow_refresh;
-            this.reloadAllToolStripMenuItem.Name = "reloadAllToolStripMenuItem";
-            this.reloadAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.reloadAllToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.reloadAllToolStripMenuItem.Text = "Reload &All";
-            this.reloadAllToolStripMenuItem.Click += new System.EventHandler(this.reloadAllToolStripMenuItem_Click);
-            // 
-            // sendAllToolStripMenuItem
-            // 
-            this.sendAllToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_go;
-            this.sendAllToolStripMenuItem.Name = "sendAllToolStripMenuItem";
-            this.sendAllToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.sendAllToolStripMenuItem.Text = "&Send All";
-            this.sendAllToolStripMenuItem.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // terminalWindowToolStripMenuItem
-            // 
-            this.terminalWindowToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.application_xp_terminal;
-            this.terminalWindowToolStripMenuItem.Name = "terminalWindowToolStripMenuItem";
-            this.terminalWindowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.terminalWindowToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.terminalWindowToolStripMenuItem.Text = "&Terminal Window";
-            this.terminalWindowToolStripMenuItem.Click += new System.EventHandler(this.terminalWindowToolStripMenuItem_Click);
-            // 
-            // firmwareFlasherToolStripMenuItem
-            // 
-            this.firmwareFlasherToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.chipwrite;
-            this.firmwareFlasherToolStripMenuItem.Name = "firmwareFlasherToolStripMenuItem";
-            this.firmwareFlasherToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.firmwareFlasherToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.firmwareFlasherToolStripMenuItem.Text = "&Firmware Flasher";
-            this.firmwareFlasherToolStripMenuItem.Click += new System.EventHandler(this.firmwareFlasherToolStripMenuItem_Click);
-            // 
-            // resetMavpixelToolStripMenuItem
-            // 
-            this.resetMavpixelToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.reset16;
-            this.resetMavpixelToolStripMenuItem.Name = "resetMavpixelToolStripMenuItem";
-            this.resetMavpixelToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.resetMavpixelToolStripMenuItem.Text = "&Reset Mavpixel";
-            this.resetMavpixelToolStripMenuItem.Click += new System.EventHandler(this.resetMavpixelToolStripMenuItem_Click);
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.application_form_edit;
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.optionsToolStripMenuItem.Text = "Program &Options";
-            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.help;
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.aboutToolStripMenuItem.Text = "&About...";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // mavpixelOnGithubToolStripMenuItem
-            // 
-            this.mavpixelOnGithubToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.github;
-            this.mavpixelOnGithubToolStripMenuItem.Name = "mavpixelOnGithubToolStripMenuItem";
-            this.mavpixelOnGithubToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.mavpixelOnGithubToolStripMenuItem.Text = "Mavpixel on &Github";
-            this.mavpixelOnGithubToolStripMenuItem.Click += new System.EventHandler(this.mavpixelOnGithubToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1483,13 +1483,13 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.boxProgress.ResumeLayout(false);
             this.boxProgress.PerformLayout();
             this.rbxPrompt.ResumeLayout(false);
             this.rbxInfo.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

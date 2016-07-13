@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPixSettings));
             this.pnlMain = new System.Windows.Forms.TableLayoutPanel();
+            this.chkHeartBeat = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxSoftserial = new System.Windows.Forms.ComboBox();
@@ -43,19 +46,16 @@
             this.chkAnim = new System.Windows.Forms.CheckBox();
             this.cbxMavlink = new System.Windows.Forms.ComboBox();
             this.trkBright = new System.Windows.Forms.TrackBar();
-            this.pnlBase = new System.Windows.Forms.Panel();
-            this.comTimer = new System.Windows.Forms.Timer(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.chkHeartBeat = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlBase = new System.Windows.Forms.Panel();
             this.btnFactory = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
+            this.comTimer = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.allDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.divider4 = new MavpixelGUI.Divider();
             this.txtSysid = new MavpixelGUI.NumericTextBox();
             this.txtDeadband = new MavpixelGUI.NumericTextBox();
@@ -116,6 +116,38 @@
             this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.00042F));
             this.pnlMain.Size = new System.Drawing.Size(339, 291);
             this.pnlMain.TabIndex = 0;
+            // 
+            // chkHeartBeat
+            // 
+            this.chkHeartBeat.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.chkHeartBeat.Location = new System.Drawing.Point(140, 217);
+            this.chkHeartBeat.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.chkHeartBeat.Name = "chkHeartBeat";
+            this.chkHeartBeat.Size = new System.Drawing.Size(111, 17);
+            this.chkHeartBeat.TabIndex = 19;
+            this.chkHeartBeat.Text = "Enabled";
+            this.chkHeartBeat.UseVisualStyleBackColor = true;
+            this.chkHeartBeat.CheckedChanged += new System.EventHandler(this.chkHeartBeat_CheckedChanged);
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(3, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 26);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Mavlink heartbeat:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(3, 186);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 26);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Mavlink system id:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
@@ -256,6 +288,16 @@
             this.trkBright.TabIndex = 1;
             this.trkBright.Scroll += new System.EventHandler(this.trkBright_Scroll);
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 163);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Advanced settings";
+            // 
             // pnlBase
             // 
             this.pnlBase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
@@ -267,91 +309,6 @@
             this.pnlBase.Name = "pnlBase";
             this.pnlBase.Size = new System.Drawing.Size(353, 40);
             this.pnlBase.TabIndex = 0;
-            // 
-            // comTimer
-            // 
-            this.comTimer.Interval = 2000;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.refreshToolStripMenuItem,
-            this.sendToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.allDefaultToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 76);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 26);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Mavlink system id:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(3, 212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 26);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Mavlink heartbeat:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // chkHeartBeat
-            // 
-            this.chkHeartBeat.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.chkHeartBeat.Location = new System.Drawing.Point(140, 217);
-            this.chkHeartBeat.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.chkHeartBeat.Name = "chkHeartBeat";
-            this.chkHeartBeat.Size = new System.Drawing.Size(111, 17);
-            this.chkHeartBeat.TabIndex = 19;
-            this.chkHeartBeat.Text = "Enabled";
-            this.chkHeartBeat.UseVisualStyleBackColor = true;
-            this.chkHeartBeat.CheckedChanged += new System.EventHandler(this.chkHeartBeat_CheckedChanged);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 163);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 13);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Advanced settings";
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.arrow_refresh;
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.refreshToolStripMenuItem.Text = "&Reload Settings";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
-            // 
-            // sendToolStripMenuItem
-            // 
-            this.sendToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_go;
-            this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
-            this.sendToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.sendToolStripMenuItem.Text = "S&end";
-            this.sendToolStripMenuItem.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // allDefaultToolStripMenuItem
-            // 
-            this.allDefaultToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.control_rewind_blue;
-            this.allDefaultToolStripMenuItem.Name = "allDefaultToolStripMenuItem";
-            this.allDefaultToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.allDefaultToolStripMenuItem.Text = "&All Default";
-            this.allDefaultToolStripMenuItem.Click += new System.EventHandler(this.allDefaultToolStripMenuItem_Click);
             // 
             // btnFactory
             // 
@@ -393,6 +350,49 @@
             this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // comTimer
+            // 
+            this.comTimer.Interval = 2000;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem,
+            this.sendToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.allDefaultToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 98);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.arrow_refresh;
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.refreshToolStripMenuItem.Text = "&Reload Settings";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
+            // sendToolStripMenuItem
+            // 
+            this.sendToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.page_go;
+            this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
+            this.sendToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.sendToolStripMenuItem.Text = "S&end";
+            this.sendToolStripMenuItem.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
+            // 
+            // allDefaultToolStripMenuItem
+            // 
+            this.allDefaultToolStripMenuItem.Image = global::MavpixelGUI.Properties.Resources.control_rewind_blue;
+            this.allDefaultToolStripMenuItem.Name = "allDefaultToolStripMenuItem";
+            this.allDefaultToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.allDefaultToolStripMenuItem.Text = "&All Default";
+            this.allDefaultToolStripMenuItem.Click += new System.EventHandler(this.allDefaultToolStripMenuItem_Click);
             // 
             // divider4
             // 
