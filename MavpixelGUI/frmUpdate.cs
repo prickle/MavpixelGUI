@@ -56,7 +56,7 @@ namespace MavpixelGUI
                 //Download CurrentVersion.xml from here
                 TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
                 int Epoch = (int)t.TotalSeconds;
-                xmlURL = "http://downloads.sourceforge.net/project/bitburner/CurrentVersion.xml?r=&ts=" + Epoch.ToString() + "&use_mirror=master";
+                xmlURL = "http://raw.githubusercontent.com/prickle/MavpixelGUI/master/CurrentVersion.xml";
                 worker = new UpdateWorker("MavpixelGUI");
                 worker.worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(worker_RunWorkerCompleted);
                 worker.checkForUpdate(xmlURL);
@@ -98,7 +98,7 @@ namespace MavpixelGUI
                 FirmwareVersion newVersion = null;
                 string result = @"\par ";
                 foreach (FirmwareVersion version in versions.Versions)
-                    if (version.Version >= frmPixSettings.MavpixelVersion
+                    if (version.Version > frmPixSettings.MavpixelVersion
                         && (newVersion == null || newVersion.Version < version.Version))
                         newVersion = version;
                 if (newVersion != null)
@@ -108,7 +108,7 @@ namespace MavpixelGUI
                     if (newVersion.ReleaseNotes != null) result += @"\par\b Notes for v" + newVersion.Version.ToString() + @":\b0\par " + newVersion.ReleaseNotes.Replace("\n", @"\par ") + "}";
                     else result += "}";
                 }
-                else result += @"Mavpixel firmware is up to date.}";
+                else result += UpdateWorker.tickRtf + @" Mavpixel firmware is up to date.}";
                 textBox.Rtf = txtBox_Text.Trim('}') + result;
             }
         }

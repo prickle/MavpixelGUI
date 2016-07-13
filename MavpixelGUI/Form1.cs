@@ -203,7 +203,7 @@ namespace MavpixelGUI
             Status = "Checking for updates";
             TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             int Epoch = (int)t.TotalSeconds;
-            string xmlURL = "http://downloads.sourceforge.net/project/bitburner/CurrentVersion.xml?r=&ts=" + Epoch.ToString() + "&use_mirror=master";
+            string xmlURL = "http://raw.githubusercontent.com/prickle/MavpixelGUI/master/CurrentVersion.xml";
             UpdateWorker worker = new UpdateWorker("MavpixelGUI");
             worker.worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(checkUpdates_RunWorkerCompleted);
             worker.worker.ProgressChanged += new ProgressChangedEventHandler(worker_ProgressChanged);
