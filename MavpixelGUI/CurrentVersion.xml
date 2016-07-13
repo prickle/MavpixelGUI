@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<BitBurner>  
+  <version>0.0.1.0</version>  
+  <url>http://sourceforge.net/projects/bitburner/files/latest/download</url>
+  <notes>
+- New: Full-featured Hex Editor can manipulate and transfer data
+- Bundle AVRdude in the program installer, WinAVR no longer needed
+- Include new AVRdude (5.11.1), new programmers are now available
+- Drag-and-drop source files onto window or into file location bars
+- Fix: Remove empty entries from recent source file dropdowns
+- Fix: Streamline startup sequence to stop controls jumping around
+- Fix: Systray minimise/restore icon accurately tracks WindowState
+</notes>  
+</BitBurner>

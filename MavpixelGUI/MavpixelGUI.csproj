@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{605350A8-93B3-458E-92D6-5F59FAA56C89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MavpixelGUI</RootNamespace>
+    <AssemblyName>MavpixelGUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alphaNum.cs" />
+    <Compile Include="AVRDude.cs" />
+    <Compile Include="Divider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Divider.Designer.cs">
+      <DependentUpon>Divider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirmwareWorker.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmErrors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmErrors.Designer.cs">
+      <DependentUpon>frmErrors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFlasher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFlasher.Designer.cs">
+      <DependentUpon>frmFlasher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModeColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModeColor.Designer.cs">
+      <DependentUpon>frmModeColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalette.Designer.cs">
+      <DependentUpon>frmPalette.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPixSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPixSettings.Designer.cs">
+      <DependentUpon>frmPixSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTerminal.Designer.cs">
+      <DependentUpon>frmTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdate.Designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsExtension.cs" />
+    <Compile Include="LedArray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedArray.Designer.cs">
+      <DependentUpon>LedArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedControl.Designer.cs">
+      <DependentUpon>LedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedStore.cs" />
+    <Compile Include="Mavlink\Mavlink.cs" />
+    <Compile Include="Mavlink\MavlinkCRC.cs" />
+    <Compile Include="Mavlink\MAVLinkMessage.cs" />
+    <Compile Include="Mavlink\MAVLinkParam.cs" />
+    <Compile Include="Mavlink\MAVLinkParamList.cs" />
+    <Compile Include="Mavlink\MavlinkParse.cs" />
+    <Compile Include="Mavlink\MavlinkUtil.cs" />
+    <Compile Include="NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Communicator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ports.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Divider.resx">
+      <DependentUpon>Divider.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmErrors.resx">
+      <DependentUpon>frmErrors.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFlasher.resx">
+      <DependentUpon>frmFlasher.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModeColor.resx">
+      <DependentUpon>frmModeColor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalette.resx">
+      <DependentUpon>frmPalette.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPixSettings.resx">
+      <DependentUpon>frmPixSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTerminal.resx">
+      <DependentUpon>frmTerminal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdate.resx">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedArray.resx">
+      <DependentUpon>LedArray.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedControl.resx">
+      <DependentUpon>LedControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Communicator.resx">
+      <DependentUpon>Communicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundBox.resx">
+      <DependentUpon>RoundBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="serialControl.resx">
+      <DependentUpon>serialControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoundBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoundBox.designer.cs">
+      <DependentUpon>RoundBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="serialControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="serialControl.Designer.cs">
+      <DependentUpon>serialControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialPort\CommAPI.cs" />
+    <Compile Include="SerialPort\DCB.cs" />
+    <Compile Include="SerialPort\ISerialStreamCtrl.cs" />
+    <Compile Include="SerialPort\NetStream.cs" />
+    <Compile Include="SerialPort\Port.cs" />
+    <Compile Include="SerialPort\PortCapabilities.cs" />
+    <Compile Include="SerialPort\PortSettings.cs" />
+    <Compile Include="SerialPort\SerialPort.cs" />
+    <Compile Include="SerialPort\SerialPortEnums.cs" />
+    <Compile Include="SerialPort\WinStream.cs" />
+    <Compile Include="UpdateWorker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rainbow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveToolStripButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyToolStripButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comments_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="About.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="avrdude.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CurrentVersion.xml" />
+    <None Include="Resources\github.png" />
+    <None Include="LICENSE" />
+    <None Include="Resources\ledglows.png" />
+    <None Include="Resources\page_add.png" />
+    <None Include="Resources\page_go.png" />
+    <None Include="Resources\page_refresh.png" />
+    <None Include="Resources\page_save.png" />
+    <None Include="Resources\page_delete.png" />
+    <None Include="Resources\arrow_in.png" />
+    <None Include="Resources\reset1.png" />
+    <None Include="Resources\reset16.png" />
+    <None Include="Resources\reset.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\palette.png" />
+    <None Include="blank.eep">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\ChipWarn.png" />
+    <None Include="avrdude.conf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\chip-write1.png" />
+    <None Include="Resources\folder-open1.png" />
+    <None Include="Resources\world_link.png" />
+    <None Include="Resources\chip-write.png" />
+    <None Include="Resources\application_form_edit.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\pasteToolStripButton.png" />
+    <None Include="Resources\led.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\lightbulb.png" />
+    <None Include="Resources\color_wheel.png" />
+    <None Include="Resources\application_xp_terminal.png" />
+    <None Include="Resources\application_go.png" />
+    <None Include="Resources\control_rewind_blue.png" />
+    <None Include="Resources\control_play_back_blue.png" />
+    <None Include="Resources\resultset_first.png" />
+    <None Include="Resources\resultset_previous.png" />
+    <None Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\folder-open.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\ws2812.png" />
+    <None Include="Resources\mavpixel.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
