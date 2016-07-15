@@ -28,3 +28,23 @@ When Mavpixel is connected to a vehicle the flight controller can forward it's m
 Mission Planner and other ground stations can also forward Mavlink messages to the network giving MavpixelGUI the ability to connect over the network, through a running ground station, back up to the vehicle, and on to a live Mavpixel for full remote configuration access. For more details see below.
 
 *More to come..*
+
+**Acknowledgements**
+
+MavpixelGUI owes thanks to it's contributors. Most notably:
+
+[Cleanflight](http://github.com/cleanflight/cleanflight) (LED strip window design) - Dominic Clifton, Petr Ledvina, Gaël James and many others.
+
+[Mission Planner](http://github.com/ArduPilot/MissionPlanner) (Mavlink libraries and simpleexample.cs) - Michael Oborne.
+
+[Serial Port Net](http://sourceforge.net/projects/serialportnet/) - Daniel Moth and Yuri Astrakhan.
+
+[GraphicsExtension.cs](http://www.codeproject.com/Articles/38436/Extended-Graphics-Rounded-rectangles-Font-metrics) - Arun Reginald Zaheeruddin.
+
+[AVRDude](http://www.nongnu.org/avrdude/) - Brian S. Dean.
+
+[Alpanum.cs](http://www.davekoelle.com/) - Dominik Hurnaus
+
+Apologies to any I may have forgotten or missed. If you belong here let me know.
+
+This software is released under the open source GPL license. For more details, see LICENSE in the application directory.
