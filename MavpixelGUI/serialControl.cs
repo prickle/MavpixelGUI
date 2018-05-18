@@ -34,13 +34,15 @@ using System.IO;
 using OpenNETCF.IO.Ports;
 using System.Net.Sockets;
 using System.Net;
-
+using System.IO.Ports;
 
 namespace MavpixelGUI
 {
     public partial class serialControl : UserControl
     {
-        SerialPort Port = null;
+
+        //SerialPort Port = null;
+        System.IO.Ports.SerialPort Port = null;
         UdpClient Client = null;
         Ports availablePorts;
         string portName;
@@ -223,6 +225,13 @@ namespace MavpixelGUI
             }
         }
 
+        private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
+        {
+            OpenNETCF.IO.Ports.SerialReceived evType = SerialReceived.EofReceived;
+            if (e.EventType == SerialData.Chars) evType = SerialReceived.ReceivedChars;
+            OnDataReceived(sender, new SerialReceivedEventArgs(evType));
+        }
+
         //Port error event
         public delegate void PortErrorEventHandler(object sender, PortErrorEventArgs e);
         public event PortErrorEventHandler PortError;
@@ -291,10 +300,17 @@ namespace MavpixelGUI
                 {
                     try
                     {
-                        string name = @"\\.\" + portName.Trim(':');
-                        Port = new SerialPort(name, baud);
-                        Port.ErrorEvent += new SerialErrorEventHandler(Port_ErrorEvent);
-                        Port.ReceivedEvent += new SerialReceivedEventHandler(OnDataReceived);
+                        string name = portName.Trim(':');
+
+                        //Port = new SerialPort(name, baud);
+                        //Port.ErrorEvent += new SerialErrorEventHandler(Port_ErrorEvent);
+                        //Port.ReceivedEvent += new SerialReceivedEventHandler(OnDataReceived);
+
+                        Port = new System.IO.Ports.SerialPort(name, baud);
+                        //Port.ErrorReceived += new Sy
+                        Port.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(DataReceivedHandler);
+                        Port.ErrorReceived += new System.IO.Ports.SerialErrorReceivedEventHandler(ErrorReceivedHandler);
+
                         chkOpen.Text = "Connecting..";
                         OnPortOpening();
                         chkOpen.Image = Properties.Resources.connect;
@@ -379,6 +395,11 @@ namespace MavpixelGUI
         public void Close()
         {
             if (chkOpen.Checked) chkOpen.Checked = false;
+        }
+
+        private void ErrorReceivedHandler(object sender, SerialErrorReceivedEventArgs e)
+        {
+            Port_ErrorEvent(this, new SerialErrorEventArgs(SerialErrors.RxOver, e.ToString()));
         }
 
         //Port error handler
@@ -546,8 +567,8 @@ namespace MavpixelGUI
                 return entry;
             }
             else if (Port != null && Port.IsOpen)
-                return Port.ReadExistingBytes();
-            else return new byte[] {};
+                return Encoding.ASCII.GetBytes(Port.ReadExisting());
+            else return new byte[] { };
         }
 
 

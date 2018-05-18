@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>  
 <MavpixelGUI>  
-  <version>1.0.0.0</version>  
-  <url>http://github.com/prickle/MavpixelGUI/releases/download/v1.0-beta/MavpixelGUI.msi</url>
+  <version>1.0.0.1</version>  
+  <url>http://github.com/prickle/MavpixelGUI/releases/download/v1.1-beta/MavpixelGUI.msi</url>
   <notes>
-MavpixelGUI v1.0-beta
+MavpixelGUI v1.1-beta
 
-- First release of MavpixelGUI .
-- Configurator for Mavpixel Mavlink Neopixel bridge.
+- Second release of MavpixelGUI.
+- Update to NET 4.5
+- Support for secure connections.
+- Native SerialPort implementation. 
 </notes>  
 </MavpixelGUI>

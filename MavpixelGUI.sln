@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavpixelGUI", "MavpixelGUI\MavpixelGUI.csproj", "{605350A8-93B3-458E-92D6-5F59FAA56C89}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MavpixelGUI-installer", "MavpixelGUI-installer\MavpixelGUI-installer.vdproj", "{A9E819C1-5129-486A-916D-95EDF3940354}"
@@ -20,5 +22,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15F1839E-1015-432B-9B9A-B28887F617D1}
 	EndGlobalSection
 EndGlobal

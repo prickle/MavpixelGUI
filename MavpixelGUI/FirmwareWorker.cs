@@ -117,6 +117,8 @@ namespace MavpixelGUI
         {
             Uri uri = new Uri(version.DownloadUrl);
             string file = Application.UserAppDataPath + "\\" + uri.Segments[uri.Segments.Length - 1];
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             web.DownloadFileAsync(uri, file);
             return file;
         }
