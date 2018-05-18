@@ -40,6 +40,8 @@
             this.cbxVersion = new System.Windows.Forms.ComboBox();
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.rbxPrompt = new MavpixelGUI.RoundBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.chkEraseEeprom = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxFlashFile = new System.Windows.Forms.ComboBox();
@@ -48,14 +50,12 @@
             this.cbxPort = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.rbxPrompt = new MavpixelGUI.RoundBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.pnlBase.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.rbxPrompt.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBase
@@ -73,6 +73,8 @@
             // 
             // lblStatus
             // 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatus.Location = new System.Drawing.Point(185, 9);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(168, 23);
@@ -201,6 +203,31 @@
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
+            // rbxPrompt
+            // 
+            this.rbxPrompt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbxPrompt.BackColor = System.Drawing.Color.Transparent;
+            this.rbxPrompt.BorderColor = System.Drawing.Color.Yellow;
+            this.rbxPrompt.Controls.Add(this.label11);
+            this.rbxPrompt.FillColor = System.Drawing.Color.MistyRose;
+            this.rbxPrompt.Location = new System.Drawing.Point(198, 13);
+            this.rbxPrompt.Name = "rbxPrompt";
+            this.rbxPrompt.Size = new System.Drawing.Size(287, 43);
+            this.rbxPrompt.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.BackColor = System.Drawing.Color.MistyRose;
+            this.label11.Location = new System.Drawing.Point(10, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(267, 38);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Use the Mavpixel\'s Mavlink serial port to flash firmware.";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // chkEraseEeprom
             // 
             this.chkEraseEeprom.AutoSize = true;
@@ -285,31 +312,6 @@
             this.openFileDialog.CheckFileExists = false;
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // rbxPrompt
-            // 
-            this.rbxPrompt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbxPrompt.BackColor = System.Drawing.Color.Transparent;
-            this.rbxPrompt.BorderColor = System.Drawing.Color.Yellow;
-            this.rbxPrompt.Controls.Add(this.label11);
-            this.rbxPrompt.FillColor = System.Drawing.Color.MistyRose;
-            this.rbxPrompt.Location = new System.Drawing.Point(198, 13);
-            this.rbxPrompt.Name = "rbxPrompt";
-            this.rbxPrompt.Size = new System.Drawing.Size(287, 43);
-            this.rbxPrompt.TabIndex = 2;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.BackColor = System.Drawing.Color.MistyRose;
-            this.label11.Location = new System.Drawing.Point(10, 3);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(267, 38);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Use the Mavpixel\'s Mavlink serial port to flash firmware.";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmFlasher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,9 +331,9 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             this.splitContainer1.ResumeLayout(false);
+            this.rbxPrompt.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.rbxPrompt.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

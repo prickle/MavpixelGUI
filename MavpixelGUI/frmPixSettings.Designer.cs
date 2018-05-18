@@ -31,10 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPixSettings));
             this.pnlMain = new System.Windows.Forms.TableLayoutPanel();
+            this.divider4 = new MavpixelGUI.Divider();
             this.chkHeartBeat = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtSysid = new MavpixelGUI.NumericTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtDeadband = new MavpixelGUI.NumericTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtMinsats = new MavpixelGUI.NumericTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxSoftserial = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -45,6 +49,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.chkAnim = new System.Windows.Forms.CheckBox();
             this.cbxMavlink = new System.Windows.Forms.ComboBox();
+            this.txtLowcell = new MavpixelGUI.NumericTextBox();
+            this.txtLowpct = new MavpixelGUI.NumericTextBox();
             this.trkBright = new System.Windows.Forms.TrackBar();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlBase = new System.Windows.Forms.Panel();
@@ -56,12 +62,6 @@
             this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.allDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.divider4 = new MavpixelGUI.Divider();
-            this.txtSysid = new MavpixelGUI.NumericTextBox();
-            this.txtDeadband = new MavpixelGUI.NumericTextBox();
-            this.txtMinsats = new MavpixelGUI.NumericTextBox();
-            this.txtLowcell = new MavpixelGUI.NumericTextBox();
-            this.txtLowpct = new MavpixelGUI.NumericTextBox();
             this.comms = new MavpixelGUI.Communicator();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBright)).BeginInit();
@@ -117,6 +117,18 @@
             this.pnlMain.Size = new System.Drawing.Size(339, 291);
             this.pnlMain.TabIndex = 0;
             // 
+            // divider4
+            // 
+            this.divider4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.divider4.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain.SetColumnSpan(this.divider4, 2);
+            this.divider4.ForeColor = System.Drawing.Color.Green;
+            this.divider4.Location = new System.Drawing.Point(3, 179);
+            this.divider4.Name = "divider4";
+            this.divider4.Size = new System.Drawing.Size(333, 1);
+            this.divider4.TabIndex = 44;
+            // 
             // chkHeartBeat
             // 
             this.chkHeartBeat.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -139,6 +151,17 @@
             this.label5.Text = "Mavlink heartbeat:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtSysid
+            // 
+            this.txtSysid.AllowSpace = false;
+            this.txtSysid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSysid.Location = new System.Drawing.Point(140, 189);
+            this.txtSysid.Name = "txtSysid";
+            this.txtSysid.Size = new System.Drawing.Size(196, 20);
+            this.txtSysid.TabIndex = 17;
+            this.txtSysid.Terminator = "";
+            this.txtSysid.TextChanged += new System.EventHandler(this.txtSysid_TextChanged);
+            // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -149,6 +172,18 @@
             this.label3.Text = "Mavlink system id:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtDeadband
+            // 
+            this.txtDeadband.AllowSpace = false;
+            this.txtDeadband.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDeadband.Location = new System.Drawing.Point(140, 133);
+            this.txtDeadband.Name = "txtDeadband";
+            this.txtDeadband.Size = new System.Drawing.Size(196, 20);
+            this.txtDeadband.TabIndex = 11;
+            this.txtDeadband.Terminator = "us";
+            this.txtDeadband.Text = "us";
+            this.txtDeadband.TextChanged += new System.EventHandler(this.txtDeadband_TextChanged);
+            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -158,6 +193,17 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Stick center deadband:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtMinsats
+            // 
+            this.txtMinsats.AllowSpace = false;
+            this.txtMinsats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMinsats.Location = new System.Drawing.Point(140, 107);
+            this.txtMinsats.Name = "txtMinsats";
+            this.txtMinsats.Size = new System.Drawing.Size(196, 20);
+            this.txtMinsats.TabIndex = 9;
+            this.txtMinsats.Terminator = "";
+            this.txtMinsats.TextChanged += new System.EventHandler(this.txtMinsats_TextChanged);
             // 
             // label1
             // 
@@ -277,6 +323,30 @@
             this.cbxMavlink.TabIndex = 13;
             this.cbxMavlink.SelectedIndexChanged += new System.EventHandler(this.cbxMavlink_SelectedIndexChanged);
             // 
+            // txtLowcell
+            // 
+            this.txtLowcell.AllowSpace = false;
+            this.txtLowcell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLowcell.Location = new System.Drawing.Point(140, 55);
+            this.txtLowcell.Name = "txtLowcell";
+            this.txtLowcell.Size = new System.Drawing.Size(196, 20);
+            this.txtLowcell.TabIndex = 5;
+            this.txtLowcell.Terminator = "v";
+            this.txtLowcell.Text = "v";
+            this.txtLowcell.TextChanged += new System.EventHandler(this.txtLowcell_TextChanged);
+            // 
+            // txtLowpct
+            // 
+            this.txtLowpct.AllowSpace = false;
+            this.txtLowpct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLowpct.Location = new System.Drawing.Point(140, 81);
+            this.txtLowpct.Name = "txtLowpct";
+            this.txtLowpct.Size = new System.Drawing.Size(196, 20);
+            this.txtLowpct.TabIndex = 7;
+            this.txtLowpct.Terminator = "%";
+            this.txtLowpct.Text = "%";
+            this.txtLowpct.TextChanged += new System.EventHandler(this.txtLowpct_TextChanged);
+            // 
             // trkBright
             // 
             this.trkBright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -363,7 +433,7 @@
             this.toolStripSeparator1,
             this.allDefaultToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 76);
             // 
             // refreshToolStripMenuItem
             // 
@@ -393,76 +463,6 @@
             this.allDefaultToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.allDefaultToolStripMenuItem.Text = "&All Default";
             this.allDefaultToolStripMenuItem.Click += new System.EventHandler(this.allDefaultToolStripMenuItem_Click);
-            // 
-            // divider4
-            // 
-            this.divider4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.divider4.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMain.SetColumnSpan(this.divider4, 2);
-            this.divider4.ForeColor = System.Drawing.Color.Green;
-            this.divider4.Location = new System.Drawing.Point(3, 179);
-            this.divider4.Name = "divider4";
-            this.divider4.Size = new System.Drawing.Size(333, 1);
-            this.divider4.TabIndex = 44;
-            // 
-            // txtSysid
-            // 
-            this.txtSysid.AllowSpace = false;
-            this.txtSysid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSysid.Location = new System.Drawing.Point(140, 189);
-            this.txtSysid.Name = "txtSysid";
-            this.txtSysid.Size = new System.Drawing.Size(196, 20);
-            this.txtSysid.TabIndex = 17;
-            this.txtSysid.Terminator = "";
-            this.txtSysid.TextChanged += new System.EventHandler(this.txtSysid_TextChanged);
-            // 
-            // txtDeadband
-            // 
-            this.txtDeadband.AllowSpace = false;
-            this.txtDeadband.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDeadband.Location = new System.Drawing.Point(140, 133);
-            this.txtDeadband.Name = "txtDeadband";
-            this.txtDeadband.Size = new System.Drawing.Size(196, 20);
-            this.txtDeadband.TabIndex = 11;
-            this.txtDeadband.Terminator = "us";
-            this.txtDeadband.Text = "us";
-            this.txtDeadband.TextChanged += new System.EventHandler(this.txtDeadband_TextChanged);
-            // 
-            // txtMinsats
-            // 
-            this.txtMinsats.AllowSpace = false;
-            this.txtMinsats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMinsats.Location = new System.Drawing.Point(140, 107);
-            this.txtMinsats.Name = "txtMinsats";
-            this.txtMinsats.Size = new System.Drawing.Size(196, 20);
-            this.txtMinsats.TabIndex = 9;
-            this.txtMinsats.Terminator = "";
-            this.txtMinsats.TextChanged += new System.EventHandler(this.txtMinsats_TextChanged);
-            // 
-            // txtLowcell
-            // 
-            this.txtLowcell.AllowSpace = false;
-            this.txtLowcell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLowcell.Location = new System.Drawing.Point(140, 55);
-            this.txtLowcell.Name = "txtLowcell";
-            this.txtLowcell.Size = new System.Drawing.Size(196, 20);
-            this.txtLowcell.TabIndex = 5;
-            this.txtLowcell.Terminator = "v";
-            this.txtLowcell.Text = "v";
-            this.txtLowcell.TextChanged += new System.EventHandler(this.txtLowcell_TextChanged);
-            // 
-            // txtLowpct
-            // 
-            this.txtLowpct.AllowSpace = false;
-            this.txtLowpct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLowpct.Location = new System.Drawing.Point(140, 81);
-            this.txtLowpct.Name = "txtLowpct";
-            this.txtLowpct.Size = new System.Drawing.Size(196, 20);
-            this.txtLowpct.TabIndex = 7;
-            this.txtLowpct.Terminator = "%";
-            this.txtLowpct.Text = "%";
-            this.txtLowpct.TextChanged += new System.EventHandler(this.txtLowpct_TextChanged);
             // 
             // comms
             // 
