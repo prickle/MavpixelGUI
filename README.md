@@ -1,5 +1,6 @@
 # MavpixelGUI
-*Under Construction..*
+
+## Windows Installer - [Download](https://github.com/prickle/MavpixelGUI/releases)
 
 MavpixelGUI is the Windows configurator application for Mavpixel.
 
@@ -11,7 +12,7 @@ For more information on the Mavpixel board including installation and wiring see
 
 ![MavpixelGUI main window](https://github.com/prickle/MavpixelGUI/raw/master/images/MavpixelGUI.jpg)
 
-##Using MavpixelGUI
+## Using MavpixelGUI
 
 MavpixelGUI is provided with layout and controls familiar to users of [Cleanflight](http://github.com/cleanflight/cleanflight). It acts as a minimal ground station and can connect to any available serial or network port or through another ground station in either Mavlink or CLI mode as appropriate. It also includes a firmware flasher for preparing and keeping Mavpixel boards up to date.
 
@@ -19,7 +20,7 @@ Because Mavpixel is based on Cleanflight LED control, much of the [Cleanflight L
 
 Note that changes made in the GUI are activated on the Mavpixel only after the Send button at the bottom of the window is pressed.
 
-##Connecting to Mavpixel
+## Connecting to Mavpixel
 
 MavpixelGUI can connect to Mavpixel in many ways, using existing channels or through new ones, either offline or while running.
 
@@ -29,7 +30,7 @@ When Mavpixel is connected to a vehicle the flight controller can forward it's m
 
 Mission Planner and other ground stations can also forward Mavlink messages to the network giving MavpixelGUI the ability to connect over the network, through a running ground station, back up to the vehicle, and on to a live Mavpixel for full remote configuration access. For more details see below.
 
-##Connecting through Mission Planner
+## Connecting through Mission Planner
 
 Connect Mission Planner to the vehicle in the usual way over USB, telemetry or any other preferred connection.
 
@@ -60,7 +61,7 @@ Note that configuring Mavpixel this way generates extra traffic on telemetry con
 
 *More to come..*
 
-##Acknowledgements
+## Acknowledgements
 
 MavpixelGUI owes thanks to it's contributors. Most notably:
 
