@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>  
 <MavpixelGUI>  
-  <version>1.0.0.1</version>  
-  <url>http://github.com/prickle/MavpixelGUI/releases/download/v1.1-beta/MavpixelGUI.msi</url>
+  <version>1.0.0.2</version>  
+  <url>http://github.com/prickle/MavpixelGUI/releases/download/v1.2-beta/MavpixelGUI.msi</url>
   <notes>
-MavpixelGUI v1.1-beta
+MavpixelGUI v1.2-beta
 
-- Second release of MavpixelGUI.
-- Update to NET 4.5
-- Support for secure connections.
-- Native SerialPort implementation. 
+Additional libraries release.
+- Included extra dlls for Avrdude that may not be present on some systems.
+- Minor fix to installer prerequisite checks.
 </notes>  
 </MavpixelGUI>
