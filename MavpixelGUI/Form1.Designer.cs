@@ -246,9 +246,9 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.ContextMenuStrip = this.contextMenuStrip1;
             this.panel1.Controls.Add(this.boxProgress);
@@ -350,9 +350,9 @@
             // 
             // lblWaiting
             // 
-            this.lblWaiting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWaiting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWaiting.BackColor = System.Drawing.Color.MistyRose;
             this.lblWaiting.Location = new System.Drawing.Point(3, 1);
             this.lblWaiting.Name = "lblWaiting";
@@ -375,27 +375,27 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.BackColor = System.Drawing.Color.MistyRose;
             this.label4.Location = new System.Drawing.Point(12, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(424, 31);
             this.label4.TabIndex = 1;
             this.label4.Text = "Configure LEDs on the grid, configure wiring order then attach LEDs on your aircr" +
-                "aft according to grid positions. This configurator is based on Cleanflight.";
+    "aft according to grid positions. This configurator is based on Cleanflight.";
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.MistyRose;
             this.label9.Location = new System.Drawing.Point(12, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(424, 31);
             this.label9.TabIndex = 0;
             this.label9.Text = "The Mavpixel can read serial Mavlink messages from an APM or Pixhawk flight contr" +
-                "oller to control colours and effects of individual LEDs on a number of strips.";
+    "oller to control colours and effects of individual LEDs on a number of strips.";
             // 
             // btnGps
             // 
@@ -1056,8 +1056,8 @@
             // 
             // divider1
             // 
-            this.divider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.divider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.divider1.BackColor = System.Drawing.Color.Transparent;
             this.divider1.ForeColor = System.Drawing.Color.Green;
             this.divider1.Location = new System.Drawing.Point(16, 34);
@@ -1093,8 +1093,8 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.btnSend);
             this.panel2.Location = new System.Drawing.Point(1, 597);
@@ -1433,11 +1433,11 @@
             this.serialControl1.Name = "serialControl1";
             this.serialControl1.Size = new System.Drawing.Size(264, 24);
             this.serialControl1.TabIndex = 1;
-            this.serialControl1.PortError += new MavpixelGUI.serialControl.PortErrorEventHandler(this.serialControl1_PortError);
-            this.serialControl1.DataReceived += new MavpixelGUI.serialControl.DataReceivedEventHandler(this.serialControl1_DataReceived);
-            this.serialControl1.PortOpened += new MavpixelGUI.serialControl.PortOpenedHandler(this.serialControl1_PortOpened);
             this.serialControl1.PortOpening += new MavpixelGUI.serialControl.PortOpeningHandler(this.serialControl1_PortOpening);
+            this.serialControl1.PortOpened += new MavpixelGUI.serialControl.PortOpenedHandler(this.serialControl1_PortOpened);
             this.serialControl1.PortClosed += new MavpixelGUI.serialControl.PortClosedHandler(this.serialControl1_PortClosed);
+            this.serialControl1.DataReceived += new MavpixelGUI.serialControl.DataReceivedEventHandler(this.serialControl1_DataReceived);
+            this.serialControl1.PortError += new MavpixelGUI.serialControl.PortErrorEventHandler(this.serialControl1_PortError);
             // 
             // comms
             // 
@@ -1448,15 +1448,15 @@
             this.comms.MavlinkParameterStart = 14;
             this.comms.MavlinkParameterTotal = 83;
             this.comms.Timeout = 1000;
-            this.comms.ProgressChanged += new MavpixelGUI.Communicator.ProgressChangedEventHandler(this.comms_ProgressChanged);
-            this.comms.WriteCommand += new MavpixelGUI.Communicator.WriteCommandEventHandler(this.comms_WriteCommand);
-            this.comms.GotMavlinkParam += new MavpixelGUI.Communicator.GotMavlinkEventHandler(this.comms_GotMavlinkParam);
             this.comms.ComStarted += new MavpixelGUI.Communicator.ComStartedEventHandler(this.comms_ComStarted);
-            this.comms.WriteMavlink += new MavpixelGUI.Communicator.WriteMavlinkEventHandler(this.comms_WriteMavlink);
             this.comms.GotData += new MavpixelGUI.Communicator.GotDataEventHandler(this.comms_GotData);
-            this.comms.ModeChanged += new MavpixelGUI.Communicator.ModeChangedEventHandler(this.comms_ModeChanged);
+            this.comms.GotMavlinkParam += new MavpixelGUI.Communicator.GotMavlinkEventHandler(this.comms_GotMavlinkParam);
             this.comms.ReadCommand += new MavpixelGUI.Communicator.ReadCommandEventHandler(this.comms_ReadCommand);
+            this.comms.WriteCommand += new MavpixelGUI.Communicator.WriteCommandEventHandler(this.comms_WriteCommand);
+            this.comms.WriteMavlink += new MavpixelGUI.Communicator.WriteMavlinkEventHandler(this.comms_WriteMavlink);
+            this.comms.ProgressChanged += new MavpixelGUI.Communicator.ProgressChangedEventHandler(this.comms_ProgressChanged);
             this.comms.Completed += new MavpixelGUI.Communicator.CompletedEventHandler(this.comms_Completed);
+            this.comms.ModeChanged += new MavpixelGUI.Communicator.ModeChangedEventHandler(this.comms_ModeChanged);
             // 
             // Form1
             // 
@@ -1474,10 +1474,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Opacity = 0;
+            this.Opacity = 0D;
             this.Text = "Mavpixel GUI Configurator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
