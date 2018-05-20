@@ -316,7 +316,16 @@
     <None Include="Resources\comments_add.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libusb0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="mavpixel.ico" />
+    <Content Include="msvcp100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="About.rtf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
