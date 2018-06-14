@@ -229,7 +229,7 @@ namespace MavpixelGUI
             else
             {
                 mavpixelVersion = version.ToString("F1");
-                MavpixelVersion = new Version(mavpixelVersion);
+                //MavpixelVersion = new Version(mavpixelVersion);
             }
             updateTitle();
         }
