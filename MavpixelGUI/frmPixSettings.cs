@@ -763,7 +763,7 @@ Remember - Baud rates are also reset to default 2400 and 57600.",
                     success = true;
                 }
 
-                else if (float.TryParse(txt, out value))
+                else if (float.TryParse(txt, style, culture, out value))
                 {
                     storedParams.set(index, value);
                     success = true;
