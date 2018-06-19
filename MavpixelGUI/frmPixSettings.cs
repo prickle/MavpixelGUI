@@ -232,7 +232,7 @@ namespace MavpixelGUI
             }
             else
             {
-                mavpixelVersion = version.ToString(culture);
+                mavpixelVersion = version.ToString("F1", culture);
                 MavpixelVersion = new Version(mavpixelVersion);
             }
             updateTitle();
@@ -698,7 +698,7 @@ Remember - Baud rates are also reset to default 2400 and 57600.",
             else if (index == ANIMATION)
                 return command + (chkAnim.Checked ? "YES" : "NO");
             else if (index == LOWCELL && float.TryParse(txtLowcell.PlainText, out f))
-                return command + f.ToString();
+                return command + f.ToString(culture);
             else if (index == LOWPCT && int.TryParse(txtLowpct.PlainText, out i))
                 return command + i.ToString();
             else if (index == MINSATS && int.TryParse(txtMinsats.Text, out i))
