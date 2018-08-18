@@ -96,6 +96,10 @@ namespace MavpixelGUI
         const int PARAM_COUNT = 11;
 
         string paramNotAvailable = "Not available";
+        
+        //Culture settings to fix decimal problems in OS languages different from english
+        System.Globalization.NumberStyles style = System.Globalization.NumberStyles.Number | System.Globalization.NumberStyles.AllowCurrencySymbol;
+        System.Globalization.CultureInfo culture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
 
         bool Modified { set { form1.Modified = value; } }
 
@@ -228,7 +232,7 @@ namespace MavpixelGUI
             }
             else
             {
-                mavpixelVersion = version.ToString("F1");
+                mavpixelVersion = version.ToString("F1", culture);
                 MavpixelVersion = new Version(mavpixelVersion);
             }
             updateTitle();
@@ -694,7 +698,7 @@ Remember - Baud rates are also reset to default 2400 and 57600.",
             else if (index == ANIMATION)
                 return command + (chkAnim.Checked ? "YES" : "NO");
             else if (index == LOWCELL && float.TryParse(txtLowcell.PlainText, out f))
-                return command + f.ToString();
+                return command + f.ToString(culture);
             else if (index == LOWPCT && int.TryParse(txtLowpct.PlainText, out i))
                 return command + i.ToString();
             else if (index == MINSATS && int.TryParse(txtMinsats.Text, out i))
@@ -727,7 +731,7 @@ Remember - Baud rates are also reset to default 2400 and 57600.",
                 success = true;
             }
 
-            else if (float.TryParse(txt, out value))
+            else if (float.TryParse(txt, style, culture, out value))
             {
                 storedParams.load(e.Index, value);
                 success = true;
@@ -759,7 +763,7 @@ Remember - Baud rates are also reset to default 2400 and 57600.",
                     success = true;
                 }
 
-                else if (float.TryParse(txt, out value))
+                else if (float.TryParse(txt, style, culture, out value))
                 {
                     storedParams.set(index, value);
                     success = true;
