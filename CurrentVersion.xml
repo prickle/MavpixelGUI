@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>  
 <MavpixelGUI>  
-  <version>1.0.0.2</version>  
-  <url>http://github.com/prickle/MavpixelGUI/releases/download/v1.2-beta/MavpixelGUI.msi</url>
+  <version>1.0.0.3</version>  
+  <url>http://github.com/prickle/MavpixelGUI/releases/download/v1.3-beta/MavpixelGUI.msi</url>
   <notes>
-MavpixelGUI v1.2-beta
+MavpixelGUI v1.3-beta
 
-Additional libraries release.
-- Included extra dlls for Avrdude that may not be present on some systems.
-- Minor fix to installer prerequisite checks.
+Internationalisation bugfix release.
+- Fix for decimal number parsing in different languages (Thanks edo-2313).
 </notes>  
 </MavpixelGUI>

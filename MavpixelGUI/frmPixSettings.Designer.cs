@@ -71,9 +71,9 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMain.ColumnCount = 2;
             this.pnlMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
             this.pnlMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -119,8 +119,8 @@
             // 
             // divider4
             // 
-            this.divider4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.divider4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.divider4.BackColor = System.Drawing.Color.Transparent;
             this.pnlMain.SetColumnSpan(this.divider4, 2);
             this.divider4.ForeColor = System.Drawing.Color.Green;
@@ -370,8 +370,8 @@
             // 
             // pnlBase
             // 
-            this.pnlBase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlBase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBase.BackColor = System.Drawing.SystemColors.Control;
             this.pnlBase.Controls.Add(this.btnFactory);
             this.pnlBase.Controls.Add(this.btnSend);
@@ -473,13 +473,13 @@
             this.comms.MavlinkParameterStart = 0;
             this.comms.MavlinkParameterTotal = 83;
             this.comms.Timeout = 1000;
-            this.comms.ProgressChanged += new MavpixelGUI.Communicator.ProgressChangedEventHandler(this.comms_ProgressChanged);
-            this.comms.WriteCommand += new MavpixelGUI.Communicator.WriteCommandEventHandler(this.comms_WriteCommand);
-            this.comms.GotMavlinkParam += new MavpixelGUI.Communicator.GotMavlinkEventHandler(this.comms_GotMavlinkParam);
             this.comms.ComStarted += new MavpixelGUI.Communicator.ComStartedEventHandler(this.comms_ComStarted);
-            this.comms.WriteMavlink += new MavpixelGUI.Communicator.WriteMavlinkEventHandler(this.comms_WriteMavlink);
             this.comms.GotData += new MavpixelGUI.Communicator.GotDataEventHandler(this.comms_GotData);
+            this.comms.GotMavlinkParam += new MavpixelGUI.Communicator.GotMavlinkEventHandler(this.comms_GotMavlinkParam);
             this.comms.ReadCommand += new MavpixelGUI.Communicator.ReadCommandEventHandler(this.comms_ReadCommand);
+            this.comms.WriteCommand += new MavpixelGUI.Communicator.WriteCommandEventHandler(this.comms_WriteCommand);
+            this.comms.WriteMavlink += new MavpixelGUI.Communicator.WriteMavlinkEventHandler(this.comms_WriteMavlink);
+            this.comms.ProgressChanged += new MavpixelGUI.Communicator.ProgressChangedEventHandler(this.comms_ProgressChanged);
             this.comms.Completed += new MavpixelGUI.Communicator.CompletedEventHandler(this.comms_Completed);
             // 
             // frmPixSettings
@@ -495,8 +495,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPixSettings";
             this.Text = "Mavpixel Settings";
-            this.Load += new System.EventHandler(this.frmPixSettings_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPixSettings_FormClosing);
+            this.Load += new System.EventHandler(this.frmPixSettings_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBright)).EndInit();
