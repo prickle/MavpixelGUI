@@ -148,6 +148,7 @@ namespace MavpixelGUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             comms.Setup();
             //mavWorker = new MavlinkWorker();
             Mavlink = new MAVLink.MavlinkParse();
